@@ -47,6 +47,7 @@ document.addEventListener('DOMContentLoaded', function calculateTotal() {
         if (design_value == null) {
             design_value = parseFloat(event.target.value);
         }
+        // subtract pre-existing value for error handling
         else {
             total = total - design_value;
             design_value = parseFloat(event.target.value);
@@ -66,6 +67,7 @@ function totalPayment(){
     let button = document.getElementById('button')
     let hoodie = document.getElementById('hoodie')
 
+    // haven't selected shirt type --> no payment
     if (tee.checked == false && polo.checked == false && button.checked == false && hoodie.checked == false){
         alert("Please select your fav shirt type.")
     }

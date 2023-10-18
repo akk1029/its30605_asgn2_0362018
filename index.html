@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customize</title>
+    <link rel="stylesheet" href="css/style.css">  
+    <script src="js/script.js"></script>  
+</head>
+
+<body>
+    
+    <fieldset>
+        <legend>Customize Your Shirt With Us</legend>
+        <div class="row">
+            <div class="col">
+                <!--shirt type-->
+                <div class="shirt_type">
+                    <h3>Select type of your shirt below:</h3>
+
+                    <form name="shirt_type_form">
+                        <img src="images/tee.png" alt="tee shirt"><br>
+                        <input type="radio" id="tee" name="shirt_type" value="20">
+                        <label for="tee">Tee Shirt (RM 20)</label> <br>
+
+                        <img src="images/polo.png" alt="polo shirt"><br>
+                        <input type="radio" id="polo" name="shirt_type" value="25">
+                        <label for="polo">Polo Shirt (RM 25)</label> <br>
+
+                        <img src="images/button.png" alt="button up shirt"><br>
+                        <input type="radio" id="button" name="shirt_type" value="35">
+                        <label for="button">Button Up (RM 35)</label> <br>
+                        
+                        <img src="images/hoodie.png" alt="hoodie"><br>
+                        <input type="radio" id="hoodie" name="shirt_type" value="75">
+                        <label for="hoodie">Hoodie (RM 75)</label>
+                    </form>
+                </div>
+            </div>
+
+            <div class="col">
+                <!--shirt design-->
+                <div class="shirt_design">
+                    <h3>Select Desgin:</h3>
+                    <div class="row">
+                        <section>
+                            <fieldset>
+                                <legend>Design 1</legend>
+                                <img src="images/fish-removebg-preview.png" alt="fish">
+                            </fieldset>
+                        </section>
+    
+                        <section>
+                            <fieldset>
+                                <legend>Design 2</legend>
+                                <img src="images/wolf-removebg-preview.png" alt="wolf">
+                            </fieldset>
+                        </section>
+    
+                        <section>
+                            <fieldset>
+                                <legend>Design 3</legend>
+                                <img src="images/mushroom-removebg-preview.png" alt="mushroom">
+                            </fieldset>
+                        </section>
+    
+                        <section>
+                            <fieldset id="disabled">
+                                <legend>Design 4</legend>
+                                <img src="images/three_head-removebg-preview.png" alt="skeleton heads">
+                            </fieldset>
+                        </section>
+    
+                        <section>
+                            <fieldset>
+                                <legend>Design 5</legend>
+                                <img src="images/dollar-removebg-preview.png" alt="dollar man">
+                            </fieldset>
+                        </section>
+    
+                        <section>
+                            <fieldset>
+                                <legend>Desing 6</legend>
+                                <img src="images/lips.png" alt="lips">
+                            </fieldset>
+                        </section>
+                    </div>
+
+                    <label for="design">Please select your design: </label>
+                    <select name="design" id="design"> 
+                        <option value="0">No Design</option>
+                        <option value="70">Design 1 (RM 70)</option>
+                        <option value="60">Design 2 (RM 60)</option>
+                        <option value="50">Design 3 (RM 50)</option>
+                        <option value="70" disabled>Design 4 (RM 70)</option>
+                        <option value="80">Design 5 (RM 80)</option>
+                        <option value="70">Design 6 (RM 70)</option>
+                    </select><br><br>
+
+                    <input type="checkbox" id="embroidery" name="addition" value="embroidery">
+                    <label for="embroidery">Include Embroidery: <strong>RM 10</strong></label>
+                    <br><br>
+                    <input type="checkbox" id="logo" name="addition" value="logo">
+                    <label for="logo">Include logo at back: <strong>RM 25</strong></label>
+                    <input type="file" name="logo_file" id="logo_file">
+
+                    <h2 id="cart">
+                        <mark>Your Cart: <span id="value">RM 0</span></mark>
+                    </h2>
+                </div>
+
+            </div>
+        </div>
+
+        <h2 class="col">Please pay <span id="total_value">RM 0</span></h2> 
+        <button id="payment" onclick="totalPayment()">Proceed to Payment</button>
+
+    </fieldset>
+
+</body>
+</html>

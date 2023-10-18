@@ -1,0 +1,103 @@
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.col{
+    flex: 1;
+}
+
+/* shirt type */
+
+.shirt_design, .shirt_type{
+    border: 2px solid black;
+    padding: 10px;
+    width: 93%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.shirt_type img{
+    width: 60px;
+    margin-top: 20px;
+}
+
+.shirt_type{
+    text-align: center;
+}
+
+.shirt_type > h3{
+    margin-bottom: 0;
+}
+
+/* shirt design */
+
+.shirt_design, .shirt_type{
+    height: 630px;
+}
+
+.shirt_design > div > section > fieldset > img{
+    width: 150px;
+    display: block;
+    margin: auto;
+}
+
+.shirt_design > div.row,
+.shirt_design section {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1;
+}
+
+.shirt_design > section{
+    width: 33%;
+    height: 220px;
+}
+
+.shirt_design > section > fieldset{
+    align-items: center;
+    height: 200px;
+}
+
+.shirt_design legend{
+    margin: auto;
+}
+
+.shirt_design select{
+    margin-top: 20px;
+}
+
+#cart{
+    text-align: right;
+}
+
+#cart mark{
+    padding: 10px;
+    background-color: greenyellow;
+}
+
+
+/* task 2 additional requirements */
+#disabled{
+    cursor: not-allowed;
+}
+
+img:hover{
+    background-color: gray;
+}
+
+.shirt_design fieldset:hover{
+    background-color: gray;
+}
+
+/* total payment part */
+
+#payment{
+    background-color: orangered;
+    color: white;
+    padding: 5px;
+}
+
+.col.button{
+    align-items: center;
+}

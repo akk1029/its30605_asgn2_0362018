@@ -62,22 +62,22 @@ document.addEventListener('DOMContentLoaded', function calculateTotal() {
 
 // totalPayment Function
 function totalPayment(){
-    let tee = document.getElementById('tee');
-    let polo = document.getElementById('polo');
-    let button = document.getElementById('button');
-    let hoodie = document.getElementById('hoodie');
+    let tee = document.getElementById('tee')
+    let polo = document.getElementById('polo')
+    let button = document.getElementById('button')
+    let hoodie = document.getElementById('hoodie')
 
     // haven't selected shirt type --> no payment
     if (tee.checked == false && polo.checked == false && button.checked == false && hoodie.checked == false){
-        alert("Please select your fav shirt type.");
+        alert("Please select your fav shirt type.")
     }
     
     else if (total > 150){
         alert(`You are eligible for 10% discount!!\nYour new total is ${(total - total/10).toFixed(2)}`)
-        payment.innerHTML = `RM ${(total - total/10).toFixed(2)}`;
+        payment.innerHTML = `RM ${(total - total/10).toFixed(2)}`
     }
 
     else{
-        alert("Thank you for your purchase!!");
+        alert("Thank you for your purchase!!")
     }
 }

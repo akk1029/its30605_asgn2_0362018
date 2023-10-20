@@ -44,14 +44,9 @@ document.addEventListener('DOMContentLoaded', function calculateTotal() {
 
     // design selection
     design.addEventListener('change', function(event){
-        if (design_value == null) {
-            design_value = parseFloat(event.target.value);
-        }
         // subtract pre-existing value for error handling
-        else {
-            total = total - design_value;
-            design_value = parseFloat(event.target.value);
-        }
+        (design_value == null) ? null: total = total - design_value;
+        design_value = parseFloat(event.target.value);
         total = design_value + total;
         cart.innerHTML = `RM ${total.toFixed(2)}`;
         payment.innerHTML = `RM ${total.toFixed(2)}`;
@@ -62,10 +57,11 @@ document.addEventListener('DOMContentLoaded', function calculateTotal() {
 
 // totalPayment Function
 function totalPayment(){
-    let tee = document.getElementById('tee')
-    let polo = document.getElementById('polo')
-    let button = document.getElementById('button')
-    let hoodie = document.getElementById('hoodie')
+    let tee = document.getElementById('tee');
+    let polo = document.getElementById('polo');
+    let button = document.getElementById('button');
+    let hoodie = document.getElementById('hoodie');
+    let grand_total = document.getElementById('total_value');
 
     // haven't selected shirt type --> no payment
     if (tee.checked == false && polo.checked == false && button.checked == false && hoodie.checked == false){
@@ -74,7 +70,7 @@ function totalPayment(){
     
     else if (total > 150){
         alert(`You are eligible for 10% discount!!\nYour new total is ${(total - total/10).toFixed(2)}`)
-        payment.innerHTML = `RM ${(total - total/10).toFixed(2)}`
+        grand_total.innerHTML = `RM ${(total - total/10).toFixed(2)}`
     }
 
     else{

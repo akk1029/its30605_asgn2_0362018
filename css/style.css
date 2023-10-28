@@ -1,15 +1,21 @@
-.row{
-    display: flex;
-    flex-wrap: wrap;
+.left{
+    float: left;
+    width: 25%;
 }
 
-.col{
-    flex: 1;
+.middle{
+    float: right;
+    width: 50%;
+}
+
+.right{
+    float: right;
+    width: 25%;
 }
 
 /* shirt type */
 
-.shirt_design, .shirt_type{
+.shirt_design, .shirt_type, .cart{
     border: 2px solid black;
     padding: 10px;
     width: 93%;
@@ -27,13 +33,13 @@
 }
 
 .shirt_type > h3{
-    margin-bottom: 0;
+    margin-bottom: 30px;
 }
 
 /* shirt design */
 
-.shirt_design, .shirt_type{
-    height: 630px;
+.shirt_design, .shirt_type, .cart{
+    height: 600px;
 }
 
 .shirt_design > div > section > fieldset > img{
@@ -67,15 +73,6 @@
     margin-top: 20px;
 }
 
-#cart{
-    text-align: right;
-}
-
-#cart mark{
-    padding: 10px;
-    background-color: greenyellow;
-}
-
 
 /* task 2 additional requirements */
 #disabled{
@@ -98,6 +95,32 @@ img:hover{
     padding: 5px;
 }
 
-.col.button{
-    align-items: center;
+.payment > h2{
+    margin-top: 650px;
+}
+
+/* cart */
+
+.cart table, .cart th, .cart td{
+    border: 1px solid black;
+    padding: 10px;
+    border-collapse: collapse;
+}
+
+.cart table{
+    margin-left: auto;
+    margin-right: auto;
+    display: none;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+#cart{
+    text-align: right;
+    margin-top: 50px;
+}
+
+#cart mark{
+    padding: 10px;
+    background-color: greenyellow;
 }

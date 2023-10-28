@@ -13,7 +13,7 @@
     <fieldset>
         <legend>Customize Your Shirt With Us</legend>
         <div class="row">
-            <div class="col">
+            <div class="col left">
                 <!--shirt type-->
                 <div class="shirt_type">
                     <h3>Select type of your shirt below:</h3>
@@ -38,7 +38,24 @@
                 </div>
             </div>
 
-            <div class="col">
+            <div class="col right">
+                <div class="cart">
+                    <h3>Your Cart: </h3>
+
+                    <table id="cart_table">
+                        <tr>
+                            <th>Item</th>
+                            <th>Price</th>
+                        </tr>
+                    </table>
+
+                    <h2 id="cart">
+                        <mark>Your Cart: <span id="value">RM 0</span></mark>
+                    </h2>
+                </div>
+            </div>
+
+            <div class="col middle">
                 <!--shirt design-->
                 <div class="shirt_design">
                     <h3>Select Desgin:</h3>
@@ -88,13 +105,13 @@
 
                     <label for="design">Please select your design: </label>
                     <select name="design" id="design"> 
-                        <option value="0">No Design</option>
-                        <option value="70">Design 1 (RM 70)</option>
-                        <option value="60">Design 2 (RM 60)</option>
-                        <option value="50">Design 3 (RM 50)</option>
-                        <option value="70" disabled>Design 4 (RM 70)</option>
-                        <option value="80">Design 5 (RM 80)</option>
-                        <option value="70">Design 6 (RM 70)</option>
+                        <option value="0" id="No Design">No Design</option>
+                        <option value="65" id="Design 1">Design 1 (RM 65)</option>
+                        <option value="60" id="Design 2">Design 2 (RM 60)</option>
+                        <option value="50" id="Design 3">Design 3 (RM 50)</option>
+                        <option value="75" id="Design 4" disabled>Design 4 (RM 75)</option>
+                        <option value="80" id="Design 5">Design 5 (RM 80)</option>
+                        <option value="70" id="Design 6">Design 6 (RM 70)</option>
                     </select><br><br>
 
                     <input type="checkbox" id="embroidery" name="addition" value="embroidery">
@@ -104,16 +121,16 @@
                     <label for="logo">Include logo at back: <strong>RM 25</strong></label>
                     <input type="file" name="logo_file" id="logo_file">
 
-                    <h2 id="cart">
-                        <mark>Your Cart: <span id="value">RM 0</span></mark>
-                    </h2>
                 </div>
 
-            </div>
+            </div>    
+
         </div>
 
-        <h2 class="col">Please pay <span id="total_value">RM 0</span></h2> 
-        <button id="payment" onclick="totalPayment()">Proceed to Payment</button>
+        <div class="payment">
+            <h2>Please pay <span id="total_value">RM 0</span></h2> 
+            <button id="payment" onclick="totalPayment()">Proceed to Payment</button>
+        </div>
 
     </fieldset>
 

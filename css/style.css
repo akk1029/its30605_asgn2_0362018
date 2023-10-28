@@ -13,10 +13,16 @@
     width: 25%;
 }
 
+h3{
+    text-align: center;
+}
+
 /* shirt type */
 
 .shirt_design, .shirt_type, .cart{
-    border: 2px solid black;
+    border-radius: 10px;
+    box-shadow: 3px 3px #333;
+    background-color: bisque;
     padding: 10px;
     width: 93%;
     margin-left: auto;
@@ -79,12 +85,12 @@
     cursor: not-allowed;
 }
 
-img:hover{
-    background-color: gray;
+.shirt_design img:hover{
+    background-color: rgb(189, 189, 189);
 }
 
 .shirt_design fieldset:hover{
-    background-color: gray;
+    background-color: rgb(189, 189, 189);
 }
 
 /* total payment part */
@@ -101,18 +107,44 @@ img:hover{
 
 /* cart */
 
-.cart table, .cart th, .cart td{
-    border: 1px solid black;
-    padding: 10px;
-    border-collapse: collapse;
+.cart th, .cart td{
+    padding: 20px;
+}
+
+/* adding colors and design elements */
+
+body{
+    background-color: beige;
+}
+
+#main{
+    padding: 20px;
+}
+
+fieldset{
+    border-radius: 20px;
+}
+
+.shirt_design fieldset{
+    background-color: beige;
+}
+
+.shirt_type img:hover{
+    filter: invert(0.25);
 }
 
 .cart table{
+    border: 1px solid;
+    border-collapse: collapse;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: #333;
     margin-left: auto;
     margin-right: auto;
     display: none;
     margin-top: 50px;
     margin-bottom: 20px;
+    background-color: antiquewhite;
 }
 
 #cart{

@@ -29,20 +29,25 @@ document.addEventListener('DOMContentLoaded', function calculateTotal() {
             // error handling for previously selected value
             if (radio_prev) {
                 total = total - radio_prev.value;
+                row = document.getElementById('type');
+                row.childNodes[0].innerHTML = `${this.id}`;
+                row.childNodes[1].innerHTML = `RM ${type_value}`;
             }
 
             else{
                 row = table.insertRow(1);
+                row.id = 'type';
                 cell1 = row.insertCell(0);
                 cell2 = row.insertCell(1);
+                cell1.innerHTML = `${this.id}`;
+                cell2.innerHTML = `RM ${type_value}`;
             }
 
 
             (this !== radio_prev) ? radio_prev = this : null;
             cart.innerHTML = `RM ${total.toFixed(2)}`;
             payment.innerHTML = `RM ${total.toFixed(2)}`;
-            cell1.innerHTML = `${this.id}`;
-            cell2.innerHTML = `RM ${total}`;
+            
         })
     }
 
